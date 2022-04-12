@@ -1,0 +1,14 @@
+.rodape {
+    text-align: center;
+    padding: 10px 0;
+    border-top: solid 2px darkorange;
+    margin-top: 10px;
+}
+.rodape__texto > a {
+    text-decoration: underline;
+    transition: ease-in .2s;
+}
+
+.rodape__texto > a:hover {
+    color: orange;
+}

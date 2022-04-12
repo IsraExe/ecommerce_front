@@ -1,0 +1,127 @@
+.contato {
+    display: flex;
+    padding: 0 6em;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contato__nome-loja {
+    font-family: 'Special Elite', cursive;
+    font-size: 30px;
+    color: darkorange;
+}
+
+.contato__lista__informacoes {
+    margin-bottom: 10px;
+}
+
+.contato__lista__link:hover {
+    color: orange;
+    transition: ease-in .1s;
+}
+
+.contato__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contato__form__titulo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.contato__form__campo {
+    width: 480px;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: solid 1px orange;
+}
+
+.contato__form__campo:last-of-type {
+    height: 120px;
+}
+
+.contato__form__btn {
+    margin-top: 10px;
+    width: 30%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: darkorange;
+    color: white;
+}
+
+/* RESPONSIVO */
+
+@media screen and (max-width: 992px) {
+    .contato {
+        padding: 0 2em;
+        /* justify-content: flex-start; */
+    }
+
+    .contato__form__campo {
+        width: 400px;
+    }
+
+    .contato__form__btn {
+        margin-top: 10px;
+        width: 45%;
+    }
+    
+}
+
+@media screen and (max-width: 856px) {
+    .contato {
+        justify-content: flex-start;
+    }
+
+    .contato__nome-loja {
+        width: 50%;
+    }
+
+    .contato__form {
+        width: 100%;
+    }
+
+    .contato__form__campo {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 728px) {
+    .contato {
+        justify-content: center;
+    }
+
+    .contato__form__campo {
+        width: 100%;
+    }
+
+    .contato__form__btn {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .contato__nome-loja {
+        width: 100%;
+        text-align: center;
+    }
+    .contato__lista {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contato__form__btn {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .contato {
+        padding: 0 1em;
+    }
+}
