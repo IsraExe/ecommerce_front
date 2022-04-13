@@ -7,19 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/main.css">
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"> -->
     <title>Vendenno</title>
 
     <script src="assets/js/carousel.js" defer></script>
+    <script src="assets/js/login.js" defer></script>
+    <script src="assets/js/validacao-login.js" defer></script>
+
+    <script src="https://kit.fontawesome.com/4180aa4517.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <!-- CABEÇALHO -->
+    
     <header class="cabecalho">
+
         <a href="">
             <h1 class="cabecalho__titulo">Vendenno</h1>
         </a>
         <input type="text" name="" id="" class="cabecalho__pesquisa" placeholder="Pesquisar produto...">
-        <a href="#login" class="cabecalho__login">Login</a>
+
+        <div class="cabecalho__login-container"> 
+            <button href="#login" class="cabecalho__login-btn" data-login>
+                Login 
+                &nbsp; 
+                <i class="fa-solid fa-angle-down icon-angle-login" data-icon-seta></i>
+            </button>
+            <div class="cabecalho__login-modal" data-modal>
+                <p class="cabecalho__login__titulo">Entre</p> 
+                <form class="cabecalho__login__form" action="" id="form-login">
+                    <label class="cabecalho__login__label" for="email">Email</label>
+                    <input class="cabecalho__login__campo" type="email" name="email-login" id="email-login" data-campo-login>
+                    <span class="error">Preencha este campo!</span>
+                    <label class="cabecalho__login__label" for="senha">Senha</label>
+                    <input class="cabecalho__login__campo" type="password" name="senha" id="senha" data-campo-login>
+                    <span class="error">Preencha este campo!</span>
+                    <button class="cabecalho__login__btn-entrar" type="submit" form="form-login">Entrar</button>
+                </form>
+            </div>
+        </div>
 
         <figure class="cabecalho__icones">
             <a href="#carrinho">
@@ -29,7 +56,10 @@
                 <img src="assets/img/icones/iconcarrinho.svg" alt="" class="cabecalho__icones__carrinho-de-compra">
             </a>
         </figure>
+
+
     </header>
+
     <!-- CABEÇALHO -->
 
 
@@ -358,10 +388,14 @@
             </ul>
             <form action="" class="contato__form">
                 <p class="contato__form__titulo">Fale conosco</p>
-                <label for="nome"></label>
-                <input type="text" class="contato__form__campo" name="nome" id="nome">
-                <label for="mensagem"></label>
-                <textarea class="contato__form__campo" name="mensagem" id="" cols="30" rows="10"></textarea>
+                <div class="contato__form__container-campo">
+                    <input type="text" class="contato__form__campo" name="nome" id="nome" required>
+                    <label class="contato__form__label" for="nome">Nome</label>
+                </div>
+                <div class="contato__form__container-campo">
+                    <textarea class="contato__form__campo" name="mensagem" id="mensagem" cols="30" rows="10" required></textarea>
+                    <label class="contato__form__label" for="mensagem">Mensagem</label>
+                </div>
                 <input class="contato__form__btn" type="submit" value="Enviar Mensagem">
             </form>
         </section>

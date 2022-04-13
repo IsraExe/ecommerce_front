@@ -29,6 +29,9 @@
     font-size: 22px;
     font-weight: bold;
 }
+.contato__form__container-campo {
+    position: relative;
+}
 
 .contato__form__campo {
     width: 480px;
@@ -36,10 +39,28 @@
     margin-top: 10px;
     border-radius: 5px;
     border: solid 1px orange;
+    outline: 0;
+    padding-left: 5px;
 }
 
-.contato__form__campo:last-of-type {
+.contato__form__label {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    margin-top: 20px;
+    transition: all .3s ease-out;
+}
+
+.contato__form__campo:focus + .contato__form__label,
+.contato__form__campo:valid + .contato__form__label {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.contato textarea {
     height: 120px;
+    padding-top: 12px;
 }
 
 .contato__form__btn {
